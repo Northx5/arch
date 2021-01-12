@@ -1,0 +1,43 @@
+.shortcut {
+    grid-column: 3 / 11;
+    grid-row: 3 / 4;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 82rem));
+    column-gap: 4rem;
+    justify-items: center;
+    
+
+    &__detail {
+        display: grid;
+        grid-template-rows: 9fr 1fr;
+        row-gap: .5rem;
+        border: 1px solid #ccc;
+        position: relative;
+
+        @media screen and (max-width: $bp-small) {
+            grid-template-rows: 5fr 1fr;
+            &:first-of-type{
+                margin-bottom: 2rem;
+            }
+          }
+
+        &-img {
+            width: 100%;
+        }
+
+        &-text {
+            padding-left: 3rem;
+            align-self: center;
+        }
+
+        &-title::after {
+            font-family: "Font Awesome 5 Free";
+            font-weight: 600;
+            font-size: 1.8rem;
+            content: "\f0a9";            
+            color: $color-secondary;
+            position: absolute;
+            right: 10px;
+        }
+    } 
+}

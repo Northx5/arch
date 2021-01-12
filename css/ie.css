@@ -1,0 +1,15 @@
+@media all and (-ms-high-contrast: none) {
+.container {
+  display: block;
+  width: 100%;
+}
+
+.cards {
+  width: 80%;
+}
+
+.cards__card {
+  float: left;
+  padding-right: 20px;
+}
+}

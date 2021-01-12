@@ -1,0 +1,175 @@
+.footer {
+    grid-column: 1 / -1;
+    background-image:url('../images/texture.jpg');
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    
+
+    &__container {
+        grid-column: 3 / 11;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min-content, 40rem));
+        column-gap: 2rem;
+    }
+
+    &__info {
+        display: grid;
+        grid-template-rows: repeat(3, minmax(min-content, 5rem));
+        row-gap: 1.4rem;
+        padding: 2rem 0 0 0;
+        font-size: $text-content;
+
+        
+
+        &-title {
+            font-size: $text-title;
+            grid-row: 1 / 2;
+            color: $color-primary;
+
+            @media screen and (max-width: $bp-small) {
+              align-self: center;
+            }
+            
+        }
+
+        &-logo {
+            grid-row: 1 / 2;
+        }
+
+        &-desc {
+            grid-row: 2 / 3;
+            color: $color-icon;
+        }
+
+        &-social {
+            grid-column: 1 / 2;
+            grid-row: 3 / 4;
+            display: flex;
+        
+            & div {
+              padding-right: .5rem;
+              cursor: pointer;
+              display: inline-block;
+              width: 50px;
+        
+              &:first-of-type {
+                background: url('../images/sm/facebook.svg') no-repeat;       
+        
+                &:hover {
+                  background: url('../images/sm/facebook_hoover.svg') no-repeat;
+                }
+              }
+        
+              &:nth-of-type(2) {
+                background: url('../images/sm/twitter.svg') no-repeat;
+        
+                &:hover {
+                  background: url('../images/sm/twitter_hoover.svg') no-repeat;
+                }
+              }
+        
+              &:nth-of-type(3) {
+                background: url('../images/sm/instagram.svg') no-repeat;
+                &:hover {
+                  background: url('../images/sm/instagram_hoover.svg') no-repeat;
+                }
+              }
+        
+              &:nth-of-type(4) {
+                background: url('../images/sm/youtube.svg') no-repeat;
+                &:hover {
+                  background: url('../images/sm/youtube_hoover.svg') no-repeat;
+                }
+              }
+        
+              &:nth-of-type(5) {
+                background: url('../images/sm/linkedin.svg') no-repeat;
+                &:hover {
+                  background: url('../images/sm/linkedin_hoover.svg') no-repeat;
+                }
+              }
+            }
+          }
+
+          &-list{
+              grid-row: 2 / -1;
+              &-item {
+                  padding: 1.2rem 0;
+                  border-bottom: 1px solid $color-gray;
+                  color: $color-icon;
+              }
+          }
+
+          &-images {
+              grid-column: 2 / -1;
+              display: grid;
+              grid-template-columns: repeat(3, 1fr);              
+              row-gap: 1.2rem;
+
+              &-img {                  
+                  width: 88px;
+              }
+
+          }
+
+          &-news {
+              grid-column: 1 / -1;
+              display: grid;
+              grid-template-rows: repeat(auto-fit, minmax(min-content, 2rem));
+
+              &-text {
+                color: $color-icon;
+              }
+
+              &-date {
+                  padding: 1.4rem 0;
+                  border-bottom: 1px solid $color-gray;
+                  color: $color-icon;
+
+                  @media screen and (max-width: $bp-small) {
+                    &:last-of-type{
+                      border-bottom: none;
+                    }
+                  }
+              }
+          }
+    }
+
+    &__sub{
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        background-color: $color-secondary;
+        color: $color-icon;
+        font-size: $text-content;
+        padding: 2.4rem 0;
+
+        
+
+        &-copy{
+            grid-column: 3 / 6;
+            
+
+            @media screen and (max-width: $bp-small) {
+              grid-column: 1 / -1;
+              padding: 0 2rem;
+              
+              }
+        }
+        & a {
+            grid-column: 6 / 11;
+            justify-self: end;
+            font-size: 2rem;
+            padding: 0 2rem;
+            color: $color-icon;
+            &:visited, &:focus {
+              color: $color-icon;
+            }
+
+            @media screen and (max-width: $bp-small) {
+              grid-column: 1 / -1;
+              
+              }
+        }
+    }
+}

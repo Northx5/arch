@@ -1,0 +1,62 @@
+.points {
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
+    background-image: url('../images/bg.jpg');
+    background-size: cover;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+
+
+    &__header {
+        width: 100%;
+        text-align: center;
+        color: $color-primary;
+        grid-column: 1 / -1;
+
+        &-title {
+            font-size: $text-content-title;
+        }
+
+        &-subtitle {
+            font-size: $text-subtitle;
+            display: block;
+        }
+    }
+
+    &__items {
+        grid-column: 3 / 11;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min-content, 54rem));
+        grid-template-rows: repeat(auto-fit, minmax(min-content, 10rem));
+        column-gap: 3rem;
+        row-gap: 2rem;
+        justify-content: center;
+        
+       
+        
+             
+    }
+
+    &__item {
+        background-color: $color-primary;
+        display: grid;
+        grid-template-rows: repeat(3, minmax(min-content, 6rem));
+        justify-items: center;
+        align-items: center;
+        text-align: center;
+        border: 1px solid $color-gray;
+        box-shadow: 0 8px 10px -3px rgba(68, 68, 68, .8);
+        padding: 3rem;
+        
+
+        & i {
+            font-size: 5rem;
+            color: $color-primary;
+            background-color: $color-icon;
+            padding: 3rem;
+            border-radius: 50%;
+        }
+       
+    }
+}

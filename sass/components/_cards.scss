@@ -1,0 +1,86 @@
+.cards {
+    grid-column: 3 / 11;
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min-content, 40rem));
+    
+    column-gap: 2rem;
+
+    @media screen and (max-width: $bp-largest) {
+        grid-template-columns: repeat(auto-fit, minmax(min-content, 40rem));
+        margin-bottom: -130px;
+        
+      }
+
+    @media screen and (max-width: $bp-large) {
+        grid-template-columns: repeat(auto-fit, minmax(min-content, 33rem));
+        margin-bottom: -130px;
+        
+      }
+    
+
+    &__card {
+        padding: 3rem;
+        z-index: 100;
+        transform: translateY(-100px);
+        border-radius: 50px 0;
+        box-shadow: 0 8px 10px -3px rgba(68, 68, 68, .4);
+        display: grid;
+        grid-template-rows: repeat(3, minmax(min-content, 2rem));
+        row-gap: 2rem;
+        justify-items: center;
+        color: $color-primary;
+
+        @media screen and (max-width: $bp-largest) {
+            &:first-of-type, &:nth-of-type(2) {
+                margin-bottom: 30px;
+            }
+          }
+
+          @media screen and (max-width: $bp-small) {
+            margin-bottom: 2rem;
+
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+          }
+
+        &:first-of-type{
+            background-color: #97a9bd;
+        }        
+        &:nth-of-type(2){
+            background-color: #a197bd;
+        }
+        &:nth-of-type(3){
+            background-color: #bda697;
+        }
+        &:nth-of-type(4){
+            background-color: #97bdab;
+        }
+
+        &-icon{
+            grid-row: 1 / 2;
+            align-self: center;
+            
+            & i {
+                font-size: 5rem;
+                color: #97a9bd;
+                background-color: $color-primary;
+                padding: 3rem;
+                border-radius: 50%;
+            }
+        }
+
+        &-header {
+            grid-row: 2 / 3;
+            font-size: $text-title;
+        }
+
+        &-text{
+            grid-row: 3 / 4;
+            font-size: $text-content;
+
+        }
+
+    }
+}

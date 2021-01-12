@@ -1,0 +1,69 @@
+.info {
+  &__header {
+    width: 100%;
+    text-align: center;
+    color: $color-secondary;
+    grid-column: 1 / -1;
+
+    &-title {
+        font-size: $text-content-title;
+    }
+
+    &-subtitle {
+        font-size: $text-subtitle;
+        display: block;
+    }
+}
+
+    &__graphs {
+      grid-column: 3 / 11;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min-content, 42rem));
+      grid-template-rows: repeat(auto-fit, minmax(10rem, 1fr));
+      justify-items: center;
+
+      @media screen and (max-width: $bp-largest) {
+        grid-template-columns: repeat(auto-fit, minmax(min-content, 91rem));
+      }
+
+      @media screen and (max-width: $bp-large) {
+        grid-template-columns: repeat(auto-fit, minmax(min-content, 68rem));
+      }
+    }
+  
+    &__graph {
+      position: relative;
+  
+      & svg {
+        height: 15rem;
+        width: 15rem;
+        
+      }
+    }
+  
+    &__number {
+      font-size: 3rem;
+      position: absolute;
+      top: 23%;
+      left: 19%;
+      width: 40%;
+      text-align: center; 
+     
+    }
+  
+    
+  
+    &__label {
+      text-align: center;
+      font-size: 2rem;
+      color: $color-secondary;
+      padding-top: 1rem;
+    }
+
+    &__circle {
+        animation: circle-chart-fill 3s forwards;
+        
+    }
+
+    
+  }
