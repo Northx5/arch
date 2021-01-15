@@ -23,7 +23,7 @@
       justify-items: center;
 
       @media screen and (max-width: $bp-largest) {
-        grid-template-columns: repeat(auto-fit, minmax(min-content, 91rem));
+        grid-template-columns: repeat(auto-fit, minmax(min-content, 31rem));
       }
 
       @media screen and (max-width: $bp-large) {

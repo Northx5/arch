@@ -5,7 +5,14 @@
     grid-template-columns: repeat(auto-fit, minmax(min-content, 82rem));
     column-gap: 4rem;
     justify-items: center;
+
+    @media screen and (max-width: $bp-largest) {
+        grid-template-columns: repeat(auto-fit, minmax(min-content, 61rem));
+      }
     
+      @media screen and (max-width: $bp-large) {
+        grid-template-columns: repeat(auto-fit, minmax(min-content, 68rem));
+      }
 
     &__detail {
         display: grid;

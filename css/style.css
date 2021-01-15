@@ -163,9 +163,9 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min-content, 40rem));
   column-gap: 2rem; }
-  @media screen and (max-width: 86em) {
+  @media screen and (max-width: 121em) {
     .cards {
-      grid-template-columns: repeat(auto-fit, minmax(min-content, 40rem));
+      grid-template-columns: repeat(auto-fit, minmax(min-content, 30rem));
       margin-bottom: -130px; } }
   @media screen and (max-width: 65em) {
     .cards {
@@ -221,6 +221,12 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(min-content, 82rem));
   column-gap: 4rem;
   justify-items: center; }
+  @media screen and (max-width: 121em) {
+    .shortcut {
+      grid-template-columns: repeat(auto-fit, minmax(min-content, 61rem)); } }
+  @media screen and (max-width: 65em) {
+    .shortcut {
+      grid-template-columns: repeat(auto-fit, minmax(min-content, 68rem)); } }
   .shortcut__detail {
     display: grid;
     grid-template-rows: 9fr 1fr;
@@ -305,9 +311,9 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(min-content, 42rem));
   grid-template-rows: repeat(auto-fit, minmax(10rem, 1fr));
   justify-items: center; }
-  @media screen and (max-width: 86em) {
+  @media screen and (max-width: 121em) {
     .info__graphs {
-      grid-template-columns: repeat(auto-fit, minmax(min-content, 91rem)); } }
+      grid-template-columns: repeat(auto-fit, minmax(min-content, 31rem)); } }
   @media screen and (max-width: 65em) {
     .info__graphs {
       grid-template-columns: repeat(auto-fit, minmax(min-content, 68rem)); } }
